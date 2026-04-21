@@ -1,0 +1,64 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bulma CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+
+    <!-- font awesome cdn -->
+    <script
+      src="https://kit.fontawesome.com/8a80b728dc.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Firestore Query Activity</title>
+  </head>
+
+  <body>
+    <section class="section">
+      <div class="container">
+        <h1 class="title">Task 2: Firestore Query Results</h1>
+        <div id="results"></div>
+      </div>
+    </section>
+
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyAzFMJryKziO6p5RtEAaUfoFsDEyGdK5Dg",
+        authDomain: "is424spring2026.firebaseapp.com",
+        projectId: "is424spring2026",
+        storageBucket: "is424spring2026.firebasestorage.app",
+        messagingSenderId: "595852674539",
+        appId: "1:595852674539:web:051d30476315a7f30d05ae",
+      };
+
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      // define authentication variable
+      let auth = firebase.auth();
+      let db = firebase.firestore();
+
+      // define a storage reference
+      let ref = firebase.storage().ref();
+    </script>
+    <!-- make sure to add your own js file as the last line in index.html file -->
+    <script src="app.js"></script>
+  </body>
+</html>
